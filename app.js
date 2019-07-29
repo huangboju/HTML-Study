@@ -6,9 +6,12 @@ console.info("hellow world");
 if (true) {
   var x = 5;
 }
-console.log(x); // 5
+console.log(x); // 5 
 
-if (true) {
-  let y = 5;
-}
-console.log(y); // ReferenceError: y 没有被声明
+
+var myvar = "my value";
+
+(function() {
+  console.log(myvar); // undefined
+  var myvar = "local value";
+})();
