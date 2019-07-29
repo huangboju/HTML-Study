@@ -6,7 +6,15 @@
   </head>
   <body>
     <section>
-      <h1>苹果</h1>
+      <h1 id="h1id">苹果</h1>
+      <a id="link" href="https://www.baidu.com">Hello world</a>
+      <button type="button" name="button" onclick="demo()">按钮</button>
+      <script type="text/javascript">
+        function demo() {
+          document.getElementById("h1id").innerHTML = "aaa";
+          document.getElementById('link').href = "https://www.google.com"
+        }
+      </script>
       <p></p>
     </section>
   </body>
