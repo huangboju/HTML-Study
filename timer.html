@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p id="ptime"></p>
+    <script type="text/javascript">
+      var time = setInterval(function() {
+        getTime();
+      });
+      function getTime() {
+        var d = new Date();
+        var t = d.toLocaleTimeString();
+        document.getElementById("ptime").innerHTML = t;
+      }
+    </script>
+  </body>
+</html>
