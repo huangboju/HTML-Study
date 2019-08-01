@@ -19,3 +19,20 @@ Student.prototype.say = function () {
 
 var s = new Student();
 s.say()
+
+
+function Animal() {
+  var _this = {};
+  _this.sayHello = function () {
+    console.log("hello");
+  }
+  return _this;
+}
+
+function Cat() {
+  var _this = Animal();
+  return _this;
+}
+
+var t = new Cat();
+t.sayHello();
