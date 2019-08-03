@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="flexbox.css">
+</head>
+
+<body>
+
+    <h3>1、flex-direction属性</h3>
+    <p>flex-direction属性决定主轴的方向（即项目的排列方向）。</p>
+    <p>
+        .box {
+        flex-direction: row | row-reverse | column | column-reverse;
+        }
+    </p>
+    <div class="box box1">
+        <div class="box-item">1</div>
+        <div class="box-item">2</div>
+        <div class="box-item">3</div>
+        <div class="box-item">4</div>
+    </div>
+
+    <h3>2、flex-wrap属性</h3>
+    <p>默认情况下，项目都排在一条线（又称"轴线"）上。flex-wrap属性定义，如果一条轴线排不下，如何换行。</p>
+    <p>
+        .box{
+        flex-wrap: nowrap | wrap | wrap-reverse;
+        }
+    </p>
+    <p>nowrap（默认）：不换行。</p>
+    <div class="box box-2">
+        <div class="box-item">1</div>
+        <div class="box-item">2</div>
+        <div class="box-item">3</div>
+        <div class="box-item">4</div>
+        <div class="box-item">5</div>
+        <div class="box-item">6</div>
+        <div class="box-item">7</div>
+    </div>
+    <p>wrap：换行，第一行在上方。</p>
+    <div class="box box-3">
+        <div class="box-item">1</div>
+        <div class="box-item">2</div>
+        <div class="box-item">3</div>
+        <div class="box-item">4</div>
+        <div class="box-item">5</div>
+        <div class="box-item">6</div>
+        <div class="box-item">7</div>
+    </div>
+    <p>wrap-reverse：换行，第一行在下方。</p>
+    <div class="box box-4">
+        <div class="box-item">1</div>
+        <div class="box-item">2</div>
+        <div class="box-item">3</div>
+        <div class="box-item">4</div>
+        <div class="box-item">5</div>
+        <div class="box-item">6</div>
+        <div class="box-item">7</div>
+    </div>
+
+</body>
+
+</html>
