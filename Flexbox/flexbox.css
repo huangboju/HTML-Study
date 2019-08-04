@@ -138,3 +138,90 @@ a {
 .box-15 .box-item {
 	height: auto;
 }
+
+.box-16 {
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+
+.box-17 {
+	flex-wrap: wrap;
+	align-content: flex-end;
+}
+
+.box-18 {
+	flex-wrap: wrap;
+	align-content: center;
+}
+
+.box-19 {
+	flex-wrap: wrap;
+	align-content: space-between
+}
+
+.box-20 {
+	flex-wrap: wrap;
+	align-content: space-around;
+}
+
+.box-21 {
+	flex-wrap: wrap;
+	align-content: stretch;
+}
+
+.box-21 .box-item {
+	height: auto;
+}
+
+.box-21 {
+	flex-wrap: wrap;
+	align-content: stretch;
+}
+
+.box-21 .box-item {
+	height: auto;
+}
+
+.box-22 .order {
+	order: -1;
+}
+
+.box-item div {
+	font-size: 14px;
+	position: relative;
+	top: -150px;
+}
+
+.box-23 .box-item {
+	flex-grow: 1;
+	width: auto;
+}
+
+.box-23 .grow-2 {
+	flex-grow: 2;
+}
+
+.box-24 .box-item {
+	width: 400px;
+}
+
+.box-24 .shrink {
+	flex-shrink: 0;
+}
+
+.box-25 .box-item {
+	flex-basis: 200px;
+	width: 400px;  /* width 将失去作用 */
+}
+
+.box-26 {
+	height: 400px;
+}
+
+.box-26 .box-item {
+	align-self: flex-start;
+}
+
+.box-26 .end {
+	align-self: flex-end;
+}
