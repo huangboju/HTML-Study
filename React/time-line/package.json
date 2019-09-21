@@ -6,19 +6,13 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.1",
-    "autoprefixer": "^6.7.7",
-    "font-awesome": "^4.7.0",
-    "postcss-cli": "^3.0.0",
-    "postcss-import": "^9.1.0",
-    "precss": "^1.4.0"
+    "autoprefixer": "^6.7.7"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "start:styles": "npm run build:styles -- --watch",
-    "build:styles": "./node_modules/.bin/postcss --config postcss.config.js src/styles/index.css -o src/index.css"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
