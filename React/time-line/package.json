@@ -11,9 +11,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "start:styles": "npm run build:styles -- --watch",
-    "build:styles": "./node_modules/.bin/postcss --config postcss.config.js src/styles/index.css -o src/index.css"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
