@@ -1,26 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import NavBar from './components/nav-bar/nav-bar.component';
+import { ThemeProvider } from './contexts/theme';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Loading from './components/loading/loading.component';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const Popular = React.lazy(() => import("./pages/popular/popular.component"));
+
+class App extends React.Component {
+  state = {
+    theme: "light",
+    toggleTheme: () => {
+      this.setState(({theme}) => ({
+        theme: theme === "light" ? "dark" : "light"
+      }));
+    }
+  };
+
+  render() {
+    return (
+      <Router>
+        <ThemeProvider value={this.state}>
+          <div className={this.state.theme}>
+            <div className="App">
+              <NavBar />
+
+              <React.Suspense fallback={<Loading />}>
+                <Switch>
+                  <Route exact path="/" component={Popular} />
+                </Switch>
+              </React.Suspense>
+            </div>
+          </div>
+        </ThemeProvider>
+      </Router>
+    );
+  }
 }
 
 export default App;
