@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Loading from './components/loading/loading.component';
 
 const Popular = React.lazy(() => import("./pages/popular/popular.component"));
+const Battle = React.lazy(() => import("./pages/battle/battle.component"));
 
 class App extends React.Component {
   state = {
@@ -28,6 +29,7 @@ class App extends React.Component {
               <React.Suspense fallback={<Loading />}>
                 <Switch>
                   <Route exact path="/" component={Popular} />
+                  <Route exact path="/battle" component={Battle} />
                 </Switch>
               </React.Suspense>
             </div>

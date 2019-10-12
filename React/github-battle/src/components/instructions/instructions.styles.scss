@@ -1,0 +1,21 @@
+.instuctions-container {
+    text-align: center;
+    margin: 0 auto 5rem;
+}
+
+.instuctions-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0;
+    padding-left: 0;
+
+    li {
+        flex: 1;
+    }
+
+    svg {
+        padding: 3rem;
+        border-radius: 3px;
+    }
+}
