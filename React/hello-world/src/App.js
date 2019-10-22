@@ -1,4 +1,5 @@
 import React, { PureComponent, Fragment} from 'react'
+import "./App.css"
 
 class App extends PureComponent {
 
@@ -34,7 +35,8 @@ class App extends PureComponent {
         return (
             <Fragment>
                 <div>
-                    <input value={this.state.inputValue} onChange={this.handleChange}/>
+                    <label htmlFor="aaaa">输入框</label>
+                    <input id="aaaa" className="input" value={this.state.inputValue} onChange={this.handleChange}/>
                     <button onClick={this.submit}>
                         增加
                     </button>
