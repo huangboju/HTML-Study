@@ -24,12 +24,9 @@ class App extends PureComponent {
 
     deleteItem(index) {
         let list = this.state.list
-        console.log(list);
-        
         list.splice(index, 1)
-        console.log(list);
         this.setState({
-            list: list
+            list: [...list]
         })
     }
 
