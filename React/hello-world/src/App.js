@@ -1,5 +1,6 @@
 import React, { PureComponent, Fragment} from 'react'
 import "./App.css"
+import AppItem from './AppItem';
 
 class App extends PureComponent {
 
@@ -7,6 +8,7 @@ class App extends PureComponent {
         super(props);
         this.handleChange = this.handleChange.bind(this)
         this.submit = this.submit.bind(this)
+        this.deleteItem = this.deleteItem.bind(this)
         this.state = {
             inputValue: "哈哈",
             list: ["第一天", "第二天"],
@@ -44,13 +46,8 @@ class App extends PureComponent {
                 <ul>
                     {
                         this.state.list.map((item, index)=> {
-                            return (
-                                <li 
-                                key={item+index}
-                                onClick={this.deleteItem.bind(this, index)}
-                                >
-                                {item}
-                                </li>
+                            return (    
+                                <AppItem key={index+item} content={item} index={index} deleteItem={this.deleteItem} />
                             )
                         })
                     }
