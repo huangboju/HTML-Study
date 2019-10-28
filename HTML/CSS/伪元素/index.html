@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>伪元素</title>
+    <style type="text/css">
+        .demo {
+            border: 1px solid #CCC;
+            width: 300px;
+            margin: 50px auto;
+            padding: 10px;
+        }
+        .demo::first-letter {
+            font-size: 40px;
+            font-weight: bold;
+            float: left;
+        }
+        .demo::first-line {
+            color: red;
+        }
+        .footer {
+            width: 300px;
+            border: 1px solid #CCC;
+            margin: 10px auto;
+            padding: 10px;
+            text-align: center;
+        }
+        .footer::before {
+            content: url("./img.png");
+            display: block;
+        }
+        .footer::after {
+            content: url("./img.png");
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo">
+        最近拜读了“阿里工程师的自我修养”手册，12 位技术专家分享生涯感悟来帮助我们这些菜鸡更好的成长，
+        度过中年危机，我收获颇多，其中有不少的方法技巧和我正在使用的，这让我觉得我做的这些事情是对的，
+        我走在了一条正确的道路上。我们程序员这个行业不像医生、律师等其他行业，那些行业可谓是越老越吃香，
+        但是我们不一样，我们不能享受越老越吃香的待遇，因为互联网发展太快，技术不断的更新，
+        就我工作的这短短几年时间就有不少技术被淘汰，比如说 Strtus2、JSP，你就算在精通这些技术也没用了，
+        因为它们已经没有市场了，不过你也不是一无所获，或许你可以体验一番古代文人英雄无用武之地的感觉。
+    </div>
+    <div class="footer">
+        今天天气好晴朗
+    </div>
+</body>
+</html>
