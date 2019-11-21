@@ -37,12 +37,12 @@ class Players extends React.Component {
                 onSubmit={player => this.handleSubmit("playerOne", player)}
               />
             ) : (
-              <PlayerInfo
-                username={playerOne}
-                label={"Player One"}
-                onReset={() => this.resetPlayer("playerOne")}
-              />
-            )}
+                <PlayerInfo
+                  username={playerOne}
+                  label={"Player One"}
+                  onReset={() => this.resetPlayer("playerOne")}
+                />
+              )}
           </div>
 
           <div className="player">
@@ -52,12 +52,12 @@ class Players extends React.Component {
                 onSubmit={player => this.handleSubmit("playerTwo", player)}
               />
             ) : (
-              <PlayerInfo
-                username={playerTwo}
-                label={"Player Two"}
-                onReset={() => this.resetPlayer("playerTwo")}
-              />
-            )}
+                <PlayerInfo
+                  username={playerTwo}
+                  label={"Player Two"}
+                  onReset={() => this.resetPlayer("playerTwo")}
+                />
+              )}
           </div>
         </div>
 
