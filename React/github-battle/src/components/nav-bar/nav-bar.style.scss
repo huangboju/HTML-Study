@@ -1,26 +1,26 @@
 .nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
 
-    ul {
-        display: flex;
-        flex-direction: row;
-
-        li {
-            margin-right: 25px;
-            font-weight: 500;
-            font-size: 1.2rem;
-        }
+    li {
+      margin-right: 25px;
+      font-weight: 500;
+      font-size: 1.2rem;
     }
+  }
 
-    button {
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 
-        svg {
-            background-color: transparent;
-        }
+    svg {
+      background-color: transparent;
     }
+  }
 }
