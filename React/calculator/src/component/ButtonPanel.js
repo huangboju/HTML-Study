@@ -9,6 +9,10 @@ export default class ButtonPanel extends React.Component {
         clickHandle: PropTypes.func,
     };
 
+    renderButton(name, orange = false, wide = false) {
+        return <Button name={name} clickHandle={this.handleClick} orange={orange} wide={wide}/>
+    }
+
     handleClick = buttonName => {
         this.props.clickHandler(buttonName);
     };
@@ -17,33 +21,33 @@ export default class ButtonPanel extends React.Component {
         return (
             <div className="component-button-panel">
                 <div>
-                    <Button name="AC" clickHandle={this.handleClick} />
-                    <Button name="+/-" clickHandle={this.handleClick} />
-                    <Button name="%" clickHandle={this.handleClick} />
-                    <Button name="÷" clickHandle={this.handleClick} orange />
+                    {this.renderButton("AC")}
+                    {this.renderButton("+/-")} 
+                    {this.renderButton("%")} 
+                    {this.renderButton("÷", true)} 
                 </div>
                 <div>
-                    <Button name="7" clickHandle={this.handleClick} />
-                    <Button name="8" clickHandle={this.handleClick} />
-                    <Button name="9" clickHandle={this.handleClick} />
-                    <Button name="x" clickHandle={this.handleClick} orange />
+                    {this.renderButton("7")}
+                    {this.renderButton("8")} 
+                    {this.renderButton("9")} 
+                    {this.renderButton("x", true)}
                 </div>
                 <div>
-                    <Button name="4" clickHandle={this.handleClick} />
-                    <Button name="5" clickHandle={this.handleClick} />
-                    <Button name="6" clickHandle={this.handleClick} />
-                    <Button name="-" clickHandle={this.handleClick} orange />
+                    {this.renderButton("4")}
+                    {this.renderButton("5")} 
+                    {this.renderButton("6")} 
+                    {this.renderButton("-", true)}
                 </div>
                 <div>
-                    <Button name="1" clickHandle={this.handleClick} />
-                    <Button name="2" clickHandle={this.handleClick} />
-                    <Button name="3" clickHandle={this.handleClick} />
-                    <Button name="+" clickHandle={this.handleClick} orange />
+                    {this.renderButton("1")}
+                    {this.renderButton("2")} 
+                    {this.renderButton("3")} 
+                    {this.renderButton("+", true)}
                 </div>
                 <div>
-                    <Button name="0" clickHandle={this.handleClick} wide />
-                    <Button name="." clickHandle={this.handleClick} />
-                    <Button name="+" clickHandle={this.handleClick} orange />
+                    {this.renderButton("0", false, true)}
+                    {this.renderButton(".")} 
+                    {this.renderButton("+", true)} 
                 </div>
             </div>
         );
