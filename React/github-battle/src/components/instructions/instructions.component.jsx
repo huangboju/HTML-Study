@@ -1,5 +1,5 @@
 import React from 'react';
-import {FaUserFriends, FaFighterJex, FaTrophy, FaFighterJet} from "react-icons/fa";
+import {FaUserFriends, FaTrophy, FaFighterJet} from "react-icons/fa";
 
 import {ThemeConsumer} from "../../contexts/theme";
 
