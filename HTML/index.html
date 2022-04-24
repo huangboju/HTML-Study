@@ -1,19 +1,47 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>样式</title>
-    <link rel="stylesheet" type="text/css" href="mystyle.css">
-    <style type="text/css" media="screen">
-      p{
-        color: blue;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>are</h1>
-    <p>今天天气好晴朗</p>
-    <a href="https://www.baidu.com" style="color: red">百度</a>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>样式</title>
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+  <style type="text/css" media="screen">
+    p {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>are</h1>
+  <p>今天天气好晴朗</p>
+  <a href="https://www.baidu.com" style="color: red">百度</a>
+</body>
+
+<script>
+  var person = {
+    name: ['Bob', 'Smith'],
+    age: 32,
+    gender: 'male',
+    interests: ['music', 'skiing'],
+    bio: function () {
+      alert(this.name[0] + ' ' + this.name[1] + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+    },
+    greeting: function () {
+      alert('Hi! I\'m ' + this.name[0] + '.');
+    }
+  };
+  function Person(name) {
+    this.name = name;
+    this.greeting = function () {
+    }
+  };
+  var salva = new Person('salva');
+  salva.name;
+  salva.greeting();
+  function doSomething(){}
+  console.log( doSomething.prototype );
+</script>
+
 </html>
