@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import NavBar from "./components/nav-bar/nav-bar.component";
 import { ThemeProvider } from "./contexts/theme";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Loading from "./components/loading/loading.component";
 
 const Popular = React.lazy(() => import("./pages/popular/popular.component"));
@@ -27,10 +27,10 @@ class App extends React.Component {
               <NavBar />
 
               <React.Suspense fallback={<Loading />}>
-                <Switch>
-                  <Route exact path="/" component={Popular} />
-                  <Route exact path="/battle" component={Battle} />
-                </Switch>
+                <Routes>
+                  <Route exact path="/" element={<Popular />} />
+                  <Route exact path="/battle" element={<Battle />} />
+                </Routes>
               </React.Suspense>
             </div>
           </div>
