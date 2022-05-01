@@ -28,8 +28,8 @@ class App extends React.Component {
 
               <React.Suspense fallback={<Loading />}>
                 <Routes>
-                  <Route exact path="/" element={<Popular />} />
-                  <Route exact path="/battle" element={<Battle />} />
+                  <Route path="/" element={<Popular />} />
+                  <Route path="/battle" element={<Battle />} />
                 </Routes>
               </React.Suspense>
             </div>

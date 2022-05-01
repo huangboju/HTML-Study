@@ -16,12 +16,12 @@ const NavBar = () => {
         <nav className="nav-bar">
           <ul>
             <li>
-              <NavLink exact to="/" activeStyle={activeStyle}>
+              <NavLink to="/" activeStyle={activeStyle}>
                 Popular
               </NavLink>
             </li>
             <li>
-              <NavLink exact to="/battle" activeStyle={activeStyle}>
+              <NavLink to="/battle" activeStyle={activeStyle}>
                 Battle
               </NavLink>
             </li>
