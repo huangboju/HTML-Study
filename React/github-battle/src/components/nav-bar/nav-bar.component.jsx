@@ -5,9 +5,9 @@ import { FaLightbulb, FaRegLightbulb } from "react-icons/fa";
 
 import "./nav-bar.style.scss";
 
-const activeStyle = {
-  color: "rgb(187, 46, 31)"
-};
+const style = ({ isActive }) => ({
+  color: isActive ? 'rgb(187, 46, 31)' : '#000',
+});
 
 const NavBar = () => {
   return (
@@ -16,12 +16,12 @@ const NavBar = () => {
         <nav className="nav-bar">
           <ul>
             <li>
-              <NavLink to="/" activeStyle={activeStyle}>
+              <NavLink exact to="/" style={style} >
                 Popular
               </NavLink>
             </li>
             <li>
-              <NavLink to="/battle" activeStyle={activeStyle}>
+              <NavLink to="/battle" style={style}>
                 Battle
               </NavLink>
             </li>
